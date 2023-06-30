@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Perfumes Latinos</title>
+</head>
+
+<body>
+  <main>
+    <div id="title">
+      <h1>Perfumes Latinos</h1>
+    </div>
+    <div>
+      <span id="empleadoMes"></span>
+    </div>
+    <section>
+      <h2>Ventas</h2>
+      <div id="divCalcularVentas">
+        <label for="vendedor">Vendedor</label>
+        <select name="vendedor" id="vendedor">
+          <option value="0">Juana</option>
+          <option value="1">Pedro</option>
+        </select>
+        <label for="producto">Producto</label>
+        <select name="producto" id="producto">
+          <option value="0">Aqua</option>
+          <option value="1">Emoción</option>
+          <option value="2">Alegría</option>
+          <option value="3">Frescura</option>
+        </select>
+        <label for="valorVentas">Registrar venta</label>
+        <input id="valorVentas" type="number">
+        <button onclick="registrarVenta()">Registrar Venta</button>
+        <button onclick="mostrarResultados()">Empleado del Mes</button>
+        <button onclick="limpiar()">Recalcular</button>
+      </div>
+      <div id="divTablas">
+        <div id="divTablaVentas">
+          <table id="tablaVentasVendedor">
+            <thead>
+              <th>Vendedor</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Valor</th>
+            </thead>
+            <tbody id="columnasVentasVendedor">
+              <!-- Filas de la tabla de ventas por vendedor -->
+            </tbody>
+          </table>
+        </div>
+        <div id="divTablaResultados">
+          <table id="tablaVentasTotal">
+            <thead>
+              <th>Vendedor</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+            </thead>
+            <tbody id="columnasVentasTotal">
+              <!-- Filas de la tabla de total de ventas por vendedor -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <div id="resultados"></div>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
